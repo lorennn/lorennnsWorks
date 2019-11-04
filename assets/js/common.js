@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
     // GIF favicon，只有firefox & IE支援，需以js動態換圖
-    var favicon_images = ['../images/gir_sperate/1.png', '../images/gir_sperate/2.png', '../images/gir_sperate/3.png'],
+    var favicon_images = ['assets/images/gir_sperate/1.png', 'assets/images/gir_sperate/2.png', 'assets/images/gir_sperate/3.png'],
         image_counter = 0; // To keep track of the current image
 
     setInterval(function() {
