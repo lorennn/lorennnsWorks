@@ -1,0 +1,116 @@
+html,
+body {
+    font-family: 'Moon-R','Microsoft JhengHei';
+    color: #333;
+}
+/* ----- sec1 ----- */
+.sec1 {
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+.sec1_svg{
+    position: relative;
+    width: 30%;
+    margin-left: 10%;
+    padding-top: 23%;
+}
+.sec1_svg .svg_text{
+    position: absolute;
+    bottom: 400px;
+    letter-spacing: -13px;
+    padding-left: 80px;
+}
+.sec1_svg .svg_3,
+.sec1_svg .svg_2,
+.sec1_svg .svg_1{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.sec1_svg .svg_3{
+    position: relative;
+    bottom: 60px;
+    z-index: 3;
+}
+.sec1_svg .svg_2{
+    bottom: 40px;
+    z-index: 2;
+}
+.sec1_svg .svg_1{
+    z-index: 1;
+    filter:drop-shadow(-25px 25px 25px rgba(82, 82, 82, 0.5));
+}
+/* footer */
+.sec1_footer{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    bottom: 0;
+    padding: 15px 50px;
+    box-sizing: border-box;
+    background-color: #e5e5e5;
+}
+.sec1_footer .footer_maintitle{
+    position: absolute;
+    top: -95px;
+    left: 52px;
+}
+.sec1_footer .maintitle_en{
+    letter-spacing: 12px;
+    line-height: 55px;
+}
+.sec1_footer .maintitle_zh{
+    letter-spacing: 4px;
+}
+.sec1_footer .footer_about{
+    padding: 3px 14px 4px 14px;
+    background-color: #424242;
+    border-radius: 15px;
+}
+.sec1_footer .footer_about::after{
+    position: relative;
+    display: inline-block;
+    content: '';
+    width: 8px;
+    height: 12px;
+    background-image: url(../images/icon/down.png);
+    background-size: cover;
+    margin-left: 50px;
+}
+/* ----- sec1 ----- end */
+/* ----- sec2 end ----- */
+.sec2 {
+    background-color: #424242;
+}
+/* ----- sec2 ----- end */
+
+@media only screen and (min-width: 992px){
+    .sec1_footer .footer_about{
+        transition: all 0.4s ease-out;
+    }
+    /* ----- sec1 ----- */
+    .sec1_footer .footer_about{
+        cursor: pointer;
+    }
+    .sec1_footer .footer_about:hover{
+        opacity: 0.5;
+    }
+    /* ----- sec1 ----- end */
+    /* ----- sec2 ----- */
+
+    /* ----- sec2 end ----- */
+}
+@media only screen and (max-width: 991px){
+    /* ----- sec1 ----- */
+
+    /* ----- sec1 ----- end */
+    /* ----- sec2 ----- */
+
+    /* ----- sec2 end ----- */
+}
+@media only screen and (max-width: 767px){
+
+}

@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
     var isChrome = window.navigator.userAgent.indexOf('Chrome') !== -1;
-    console.log(isChrome);
+    // console.log(isChrome);
     if (isChrome) {
         // alert('是Chrome瀏覽器');
         // GIF favicon，只有firefox & IE支援，需以js動態換圖
