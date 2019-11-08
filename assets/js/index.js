@@ -21,4 +21,78 @@ jQuery(document).ready(function() {
         observer:true,
         observeParents:true,
     });
+
+    // UIUX FD 亂碼
+    // 抽取陣列中隨機字符
+    function randomText() {
+        var texts = ["a", "b", "c", "d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","i","u","v","w","x","y","z","~","&","|","^","ç","@","]","[","{","}","ù","*","µ","¤","$","£","€","°",")","(","+","-","/","<",">","²","`","é","è","1","2","3","4","5","6","7","8","9","0"];
+        // 隨機亂數 return Math.ceil( Math.random() * (max - min) + min);
+        return texts[Math.ceil( Math.random() * 65)];
+    }
+
+    // 每個字改變,停止改變的速率皆不同（寫不出統一運作，先用暴力寫法
+    setTimeout(function(){
+        // text_1
+        let interval_1 = setInterval(function(){
+            $('.js_svg_text .text_1').text(randomText());
+        }, 500);
+
+        setTimeout(function(){
+            clearTimeout(interval_1);
+            $('.js_svg_text .text_1').text('U');
+        }, 3000);
+
+        // text_2
+        let interval_2 = setInterval(function(){
+            $('.js_svg_text .text_2').text(randomText());
+        }, 80);
+
+        setTimeout(function(){
+            clearTimeout(interval_2);
+            $('.js_svg_text .text_2').text('I');
+        }, 1000);
+
+        // text_3
+        let interval_3 = setInterval(function(){
+            $('.js_svg_text .text_3').text(randomText());
+        }, 100);
+
+        setTimeout(function(){
+            clearTimeout(interval_3);
+            $('.js_svg_text .text_3').text('U');
+        }, 5000);
+
+        // text_4
+        let interval_4 = setInterval(function(){
+            $('.js_svg_text .text_4').text(randomText());
+        }, 350);
+
+        setTimeout(function(){
+            clearTimeout(interval_4);
+            $('.js_svg_text .text_4').text('X');
+        }, 3500);
+
+
+        // text_5
+        let interval_5 = setInterval(function(){
+            $('.js_svg_text .text_5').text(randomText());
+        }, 350);
+
+        setTimeout(function(){
+            clearTimeout(interval_5);
+            $('.js_svg_text .text_5').text('F');
+        }, 6500);
+
+
+        // text_6
+        let interval_6 = setInterval(function(){
+            $('.js_svg_text .text_6').text(randomText());
+        }, 500);
+
+        setTimeout(function(){
+            clearTimeout(interval_6);
+            $('.js_svg_text .text_6').text('D');
+        }, 7000);
+        
+    }, 4000);
 });
