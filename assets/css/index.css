@@ -5,6 +5,15 @@ html,
 body {
     font-family: 'Moon-R','Microsoft JhengHei';
     color: #333;
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+}
+.sec1,
+.sec1_lightbox{
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
 }
 /* ----- sec1 ----- */
 .sec1 {
@@ -18,13 +27,16 @@ body {
     position: relative;
     width: 20%;
     margin-left: 14%;
-    padding-top: 11%;
     animation: intoGround 25s ease infinite both;
+}
+.sec1.lightbox_open .sec1_svg{
+    opacity: 0;
+    animation: none;
 }
 .sec1_svg .svg_text{
     position: absolute;
-    width: 68%;
-    bottom: 360px;
+    width: 75%;
+    bottom: 310px;
     padding-left: 50px;
     text-align: center;
     z-index: 4;
@@ -38,7 +50,7 @@ body {
 .sec1_svg .text_fd{
     animation: fd 25s ease infinite both;
 }
-.sec1_svg .text_uiux i{
+.sec1_svg .text_uiux i,.sec1_svg .text_fd i{
     width: 25%;
 }
 
@@ -70,17 +82,20 @@ body {
     margin-left: 10%;
     z-index: 3;
 }
+.sec1_svg .svg_3 path{
+    opacity: 0;
+}
 .sec1_svg .svg_3 #path_1{
-    animation: pathDown 25s ease-out infinite both;
+    animation: pathDown 25s ease-out infinite forwards;
 }
 .sec1_svg .svg_3 #path_2{
-    animation: pathDown 25s ease-out 0.2s infinite both;
+    animation: pathDown 25s ease-out 0.2s infinite forwards;
 }
 .sec1_svg .svg_3 #path_3{
-    animation: pathDown 25s ease-out 0.4s infinite both;
+    animation: pathDown 25s ease-out 0.4s infinite forwards;
 }
 .sec1_svg .svg_3 #path_4{
-    animation: pathDown 25s ease-out 0.55s infinite both;
+    animation: pathDown 25s ease-out 0.55s infinite forwards;
 }
 .sec1_svg .svg_3 #path_5{
     animation: pathDown 25s ease-out 0.7s infinite both;
@@ -122,16 +137,23 @@ body {
       0%{ transform: translateY(-85%);opacity: 0; }
       7%{ transform: translateY(-85%);opacity: 0; }
       9%{ transform: translateY(0%);opacity: 1; }
-    100%{ transform: translateY(0%);opacity: 1; }
+      88%{ transform: translateY(0%);opacity: 1; }
+      88.0001%{ opacity: 0; }
+    100%{ transform: translateY(0%);opacity: 0; }
 }
+
 @keyframes phone2{
     /* 制高點 */
-     0%{ bottom: 130%; }
+     0%{ bottom: 130%;opacity: 0; }
      /* 低點回彈 */
-     5%{ bottom: -3%; }
+     5%{ bottom: -3%;opacity: 1; }
      /* 制低點 */
     10%{ bottom: -1.5%; }
+    /* 70%{ opacity: 1; }
+    70.00001%{ opacity: 1; } */
     79%{ bottom: -1.5%; }
+    90.9999%{ opacity: 1; }
+    100%{ bottom: -1.5%;opacity: 0; }
 }
 @keyframes phone1{
     /* 制高點 */
@@ -150,16 +172,17 @@ body {
 
 /* phone 整體沒入平面 */
 @keyframes intoGround{
-      0%{ padding-top: 11%;}
-     82%{ padding-top: 11%;}
+      0%{ padding-top: 9%;}
+     82%{ padding-top: 9%;}
      84%{ opacity: 1;}
-     86%{ padding-top: 14%;opacity: 0;}
-    100%{ padding-top: 14%;opacity: 0;}
+     86%{ padding-top: 12%;opacity: 0;}
+    100%{ padding-top: 12%;opacity: 0;}
 }
 /* svg end */
 /* 作品 swiper */
 .sec1_swiper{
     position: absolute;
+    width: 203px;
     height: 100%;
     top: 0;
     right: 5%;
@@ -172,6 +195,7 @@ body {
     top: 70px;
 }
 .sec1_swiper .swiper-slide{
+    /* height: -webkit-fit-content; */
     height: -moz-fit-content;
     height: fit-content;
 }
@@ -246,6 +270,7 @@ body {
 .sec1_footer .footer_about{
     padding: 3px 14px 4px 14px;
     background-color: #424242;
+    text-decoration: none;
     border-radius: 15px;
 }
 .sec1_footer .footer_about::after{
@@ -258,10 +283,100 @@ body {
     background-size: cover;
     margin-left: 50px;
 }
+.sec1_footer .footer_contact span{
+    vertical-align: middle;
+}
+.sec1_footer .contact_text{
+    margin-right: 10px;
+}
+.sec1_footer .contact_phone,.sec1_footer .contact_email{
+    display: inline-block;
+}
+.sec1_footer .contact_phone{
+    width: 22px;
+    height: 22px;
+    background-image: url(../images/icon/phone.png);
+    background-size: cover;
+}
+.sec1_footer .contact_phone::after{
+    position: relative;
+    display: inline-block;
+    content: '';
+    width: 1px;
+    height: 21px;
+    background-color: rgb(105, 105, 105);
+    top: 0;
+    left: 27px;
+}
+.sec1_footer .contact_email{
+    width: 33px;
+    height: 23px;
+    background-image: url(../images/icon/email.png);
+    background-size: cover;
+}
+/* 作品彈窗 */
+.sec1_lightbox{
+    position: absolute;
+    width: 65%;
+    top: 0;
+    left: 0;
+    margin: 0 240px 0 330px;
+    opacity: 0;
+    z-index: -1;
+}
+.sec1_lightbox.active{
+    opacity: 1;
+    z-index: 5;
+}
+/* .sec1_lightbox .lightbox_wrap{
+    display: flex;
+} */
+.sec1_lightbox .lightbox_info{
+    position: absolute;
+    display: block;
+    width: 27%;
+    padding-top: 220px;
+}
+.sec1_lightbox .lightbox_info .info_title{
+    display: inline-block;
+    padding: 4px 20px;
+    border: 1px solid rgba(163, 163, 163, 0.5);
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+.sec1_lightbox .lightbox_info .info_tag{
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+.sec1_lightbox .lightbox_info .info_tag::before{
+    display: inline-block;
+    content:'#';
+    margin-right: 10px;
+}
+.sec1_lightbox .lightbox_imgWrap{
+    height: calc(100vh - 195px);
+    padding-top: 195px;
+    overflow-y: scroll;
+}
+.sec1_lightbox .lightbox_imgWrap::-webkit-scrollbar {
+    opacity: 0;
+}
+.sec1_lightbox .lightbox_img{
+    display: block;
+    width: 55%;
+    margin-left: 30%;
+    padding-bottom: 100px;
+    filter: drop-shadow(12px 29px 25px rgba(51, 51, 51, 0.4));
+}
+.sec1_lightbox .lightbox_img img{
+    width: 100%;
+}
+/* 作品彈窗 end */
 /* ----- sec1 ----- end */
 /* ----- sec2 end ----- */
 .sec2 {
     background-color: #424242;
+    height: 100vh;
 }
 /* ----- sec2 ----- end */
 
@@ -277,8 +392,11 @@ body {
     }
     /* ----- sec1 ----- */
     .sec1_swiper .swiper-slide{
-        opacity: 0.5;
+        opacity: 0.2;
         cursor: pointer;
+    }
+    .sec1_swiper .swiper-slide-active{
+        opacity: 0.6;
     }
     .sec1_swiper .swiper-slide:hover{
         opacity: 1;

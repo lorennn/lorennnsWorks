@@ -40,7 +40,7 @@ jQuery(document).ready(function() {
         setTimeout(function(){
             clearTimeout(interval_1);
             $('.js_svg_text .text_1').text('U');
-        }, 3000);
+        }, 1500);
 
         // text_2
         let interval_2 = setInterval(function(){
@@ -50,7 +50,7 @@ jQuery(document).ready(function() {
         setTimeout(function(){
             clearTimeout(interval_2);
             $('.js_svg_text .text_2').text('I');
-        }, 1000);
+        }, 500);
 
         // text_3
         let interval_3 = setInterval(function(){
@@ -60,7 +60,7 @@ jQuery(document).ready(function() {
         setTimeout(function(){
             clearTimeout(interval_3);
             $('.js_svg_text .text_3').text('U');
-        }, 5000);
+        }, 2000);
 
         // text_4
         let interval_4 = setInterval(function(){
@@ -70,7 +70,7 @@ jQuery(document).ready(function() {
         setTimeout(function(){
             clearTimeout(interval_4);
             $('.js_svg_text .text_4').text('X');
-        }, 3500);
+        }, 1700);
 
 
         // text_5
@@ -81,7 +81,7 @@ jQuery(document).ready(function() {
         setTimeout(function(){
             clearTimeout(interval_5);
             $('.js_svg_text .text_5').text('F');
-        }, 6500);
+        }, 3000);
 
 
         // text_6
@@ -92,7 +92,13 @@ jQuery(document).ready(function() {
         setTimeout(function(){
             clearTimeout(interval_6);
             $('.js_svg_text .text_6').text('D');
-        }, 7000);
+        }, 3200);
         
     }, 4000);
+
+    // sec1 lightbox
+    $('.js_sec1_lightbox_btn').click(function(){
+        $('.js_sec1_lightbox').toggleClass('active');
+        $('.sec1').toggleClass('lightbox_open');
+    });
 });

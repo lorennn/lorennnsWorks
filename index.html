@@ -9,7 +9,8 @@
         <!-- reset -->
         <link rel="stylesheet" href="assets/css/reset.css" />
         <link rel="stylesheet" href="assets/css/font.css" />
-        <!-- swiper 5.2.0.min -->
+        <!-- google Noto Sans -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400&display=swap&subset=chinese-traditional" rel="stylesheet">        <!-- swiper 5.2.0.min -->
         <link rel="stylesheet" href="assets/css/plugin/swiper5.2.0.min.css">
         <!-- 本頁樣式 -->
         <link rel="stylesheet" href="assets/css/index.css" />
@@ -156,7 +157,7 @@
             <div class="sec1_swiper">
                 <div class="swiper-container-sec1">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide js_sec1_lightbox_btn">
                             <img src="assets/images/index/work1.png" alt="work1.png">
                         </div>
                         <div class="swiper-slide">
@@ -188,22 +189,39 @@
                     <div class="swiper-button-prev-sec1"></div>
                 </div>
             </div>
-            <!--  -->
+            <!-- sec1 footer -->
             <div class="sec1_footer">
                 <p class="footer_maintitle font-Moon-R">
-                    <span class="maintitle_en fz-34">LOREN'S WORKS</span><br>
+                    <span class="maintitle_en fz-25">LOREN'S WORKS</span><br>
                     <span class="maintitle_zh fz-16">林伊珞UIUX & 前端作品集</span>
                 </p>
-                <p class="footer_about font-fff fz-16 ls-2 font-Moon-L">about me</p>
+                <a href="index.html#sec2" class="footer_about font-fff fz-16 ls-2 font-Moon-L">about me</a>
                 <p class="footer_contact">
                     <span class="contact_text fz-16 font-acacac ls-2 font-Moon-L">contact</span>
                     <span class="contact_phone"></span>
                     <span class="contact_email"></span>
                 </p>
             </div>
+
+            <!-- 作品彈窗 -->
+            <div class="sec1_lightbox js_sec1_lightbox">
+                <!-- <div class="lightbox_wrap"> -->
+                    <ul class="lightbox_info fz-16 font-NotoSans fw-lighter font-a3a3a3">
+                        <li class="info_title font-Moon-L fz-24">UIUX WORKS</li>
+                        <li class="info_tag">CI design</li>
+                        <li class="info_tag">金馬影展設計 prototype</li>
+                        <li class="info_palettes"></li>
+                    </ul>
+                    <p class="lightbox_imgWrap">
+                        <span class="lightbox_img">
+                            <img src="assets/images/index/work1_B.png" alt="work1_B.png">
+                        </span>
+                    </p>
+                <!-- </div> -->
+            </div>
         </section>
 
-        <section class="sec2"></section>
+        <section class="sec2" id="sec2"></section>
 
         <!-- JS -->
         <script src="assets/js/jquery-1.11.2.min.js"></script>
