@@ -16,7 +16,20 @@
         <link rel="stylesheet" href="assets/css/index.css" />
     </head>
     <body>
-        <section class="sec1">
+        <!-- sec1 header -->
+        <header class="sec1_header">
+            <p class="header_maintitle font-Moon-R">
+                <span class="maintitle_en fz-25">LOREN'S WORKS</span><br>
+                <span class="maintitle_zh fz-16">林伊珞UIUX & 前端作品集</span>
+            </p>
+            <p class="header_about js_about_me font-fff fz-16 ls-2 font-Moon-L">about me</p>
+            <p class="header_contact">
+                <span class="contact_text fz-16 font-acacac ls-2 font-Moon-L">contact</span>
+                <a href="tel:0919961955" class="contact_phone"></a>
+                <a href="mailto:roy830817@yahoo.com.tw" class="contact_email"></a>
+            </p>
+        </header>
+        <section class="sec1" id="sec1">
             <!-- SVG Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) -->
             <div class="sec1_svg">
                 <!-- svg 手機圖示 -->
@@ -159,26 +172,29 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide js_sec1_lightbox_btn">
                             <img src="assets/images/index/work1.png" alt="work1.png">
+                            <p class="slide_text font-a3a3a3 fw-lighter fz-13">CI design・金馬影展設計 prototype</p>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide js_sec1_lightbox_btn">
                             <img src="assets/images/index/work2.png" alt="work2.png">
+                            <p class="slide_text font-a3a3a3 fw-lighter fz-13">CI design・專輯募資平台 prototype</p>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide js_sec1_lightbox_btn">
+                            <img src="assets/images/index/weather.png" alt="weather.png">
+                            <p class="slide_text font-a3a3a3 fw-lighter fz-13">天氣APP・天氣 prototype</p>
+                        </div>
+                        <div class="swiper-slide js_sec1_lightbox_btn">
                             <img src="assets/images/index/work3.png" alt="work3.png">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide js_sec1_lightbox_btn">
                             <img src="assets/images/index/work3.png" alt="work3.png">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide js_sec1_lightbox_btn">
                             <img src="assets/images/index/work3.png" alt="work3.png">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide js_sec1_lightbox_btn">
                             <img src="assets/images/index/work3.png" alt="work3.png">
                         </div>
-                        <div class="swiper-slide">
-                            <img src="assets/images/index/work3.png" alt="work3.png">
-                        </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide js_sec1_lightbox_btn">
                             <img src="assets/images/index/work3.png" alt="work3.png">
                         </div>
                     </div>
@@ -189,25 +205,12 @@
                     <div class="swiper-button-prev-sec1"></div>
                 </div>
             </div>
-            <!-- sec1 footer -->
-            <div class="sec1_footer">
-                <p class="footer_maintitle font-Moon-R">
-                    <span class="maintitle_en fz-25">LOREN'S WORKS</span><br>
-                    <span class="maintitle_zh fz-16">林伊珞UIUX & 前端作品集</span>
-                </p>
-                <a href="index.html#sec2" class="footer_about font-fff fz-16 ls-2 font-Moon-L">about me</a>
-                <p class="footer_contact">
-                    <span class="contact_text fz-16 font-acacac ls-2 font-Moon-L">contact</span>
-                    <span class="contact_phone"></span>
-                    <span class="contact_email"></span>
-                </p>
-            </div>
 
-            <!-- 作品彈窗 -->
-            <div class="sec1_lightbox js_sec1_lightbox">
-                <!-- <div class="lightbox_wrap"> -->
+            <div class="sec1_lightbox_wrap js_sec1_lightbox_wrap">
+                <!-- 作品彈窗 1 -->
+                <div class="sec1_lightbox sec1_lightbox_1 js_sec1_lightbox">
                     <ul class="lightbox_info fz-16 font-NotoSans fw-lighter font-a3a3a3">
-                        <li class="info_title font-Moon-L fz-24">UIUX WORKS</li>
+                        <li class="info_title font-Moon-L fz-22">UIUX WORKS</li>
                         <li class="info_tag">CI design</li>
                         <li class="info_tag">金馬影展設計 prototype</li>
                         <li class="info_palettes"></li>
@@ -217,14 +220,78 @@
                             <img src="assets/images/index/work1_B.png" alt="work1_B.png">
                         </span>
                     </p>
-                <!-- </div> -->
+                </div>
+                <!-- 作品彈窗 1 end -->
+
+                <!-- 作品彈窗 2 -->
+                <div class="sec1_lightbox sec1_lightbox_2 js_sec1_lightbox">
+                    <ul class="lightbox_info fz-16 font-NotoSans fw-lighter font-a3a3a3">
+                        <li class="info_title font-Moon-L fz-22">UIUX WORKS</li>
+                        <li class="info_tag">WEB</li>
+                        <li class="info_tag">專輯募資平台 prototype</li>
+                        <li class="info_palettes"></li>
+                    </ul>
+                    <p class="lightbox_imgWrap js_sec1_lightbox_wrap">
+                        <span class="lightbox_img">
+                            <img src="assets/images/index/work2_B.png" alt="work2_B.png">
+                        </span>
+                    </p>
+                </div>
+                <!-- 作品彈窗 2 end -->
+
+                <!-- 作品彈窗 3 -->
+                <div class="sec1_lightbox sec1_lightbox_3 js_sec1_lightbox">
+                    <ul class="lightbox_info fz-16 font-NotoSans fw-lighter font-a3a3a3">
+                        <li class="info_title font-Moon-L fz-22">UIUX WORKS</li>
+                        <li class="info_tag">APP</li>
+                        <li class="info_tag">天氣 prototype</li>
+                        <li class="info_palettes"></li>
+                        <li class="info_palettes"></li>
+                        <li class="info_palettes"></li>
+                    </ul>
+                    <p class="lightbox_imgWrap js_sec1_lightbox_wrap">
+                        <!-- 只有mobile版 加上 lightbox_img_mobile -->
+                        <span class="lightbox_img lightbox_img_mobile">
+                            <img src="assets/images/index/weather_B-01.png" alt="weather-01.png">
+                            <img src="assets/images/index/weather_B-02.png" alt="weather-02.png">
+                            <img src="assets/images/index/weather_B-03.png" alt="weather-03.png">
+                        </span>
+                    </p>
+                </div>
+                <!-- 作品彈窗 3 end -->
+            </div>
+
+            <!-- 點擊其他區域關閉彈窗 -->
+            <div class="sec1_lightbox_close js_sec1_lightbox_close"></div>
+        </section>
+
+        <section class="sec2 font-fff-07" id="sec2">
+            <div class="sec2_self">
+                <p class="self_name fz-30">林伊珞</p>
+                <ul class="edu_wrap">
+                    <li class="edu_img">
+                        <img src="assets/images/index/icon_III.png" alt="icon_III.png">
+                    </li>
+                    <li class="edu_cont ls-1 fz-16">
+                        <span class="cont_text">資策會教育研究所<i class="font-e8cfa8">2019</i></span>
+                        <span class="cont_text">WEB UI/UX 前端工程師養成班</span>
+                    </li>
+                </ul>
+                <ul class="edu_wrap">
+                    <li class="edu_img">
+                        <img src="assets/images/index/icon_ntua.png" alt="icon_ntua.png">
+                    </li>
+                    <li class="edu_cont ls-1 fz-16">
+                        <span class="cont_text">台灣藝術大學<i class="font-e8cfa8">2012 - 2017</i></span>
+                        <span class="cont_text">工藝設計學系\書畫藝術學系 雙主修</span>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section class="sec2" id="sec2"></section>
-
         <!-- JS -->
         <script src="assets/js/jquery-1.11.2.min.js"></script>
+        <script src="assets/js/jquery.easing.1.3.min.js"></script>
         <script src="assets/js/common.js"></script>
         <script src="assets/js/plugin/swiper5.2.0.min.js"></script>
         <script src="assets/js/index.js"></script>

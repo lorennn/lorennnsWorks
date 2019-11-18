@@ -1,10 +1,34 @@
 jQuery(document).ready(function() {
-    // swiper
-    var swiper1 = new Swiper('.swiper-container-sec1', {
+    
+    // header about me
+    $('.js_about_me').click(function(){
+        var windowH = $(window).height();
+        if($('body').hasClass('sec2')){
+            $('body').animate({
+                scrollTop: (Number(-windowH))
+            },2000);
+
+            // 回到sec1時header再變色
+            setTimeout(function(){
+                $('.sec1_header').removeClass('black');
+            },500);
+            $(this).text('about me');
+        }else{
+            $('body').animate({
+                scrollTop: windowH
+            },800);
+            $('.sec1_header').addClass('black');
+            $(this).text('back to top');
+        }
+        $('body').toggleClass('sec2');
+    });
+
+    // sec1 swiper
+    var swiper = new Swiper('.swiper-container-sec1', {
         direction: 'vertical',
         slidesPerView:'auto',
         spaceBetween : 20,
-        loop : true,
+        // loop : true,
         autoplay : true,
         speed:1500,
         freeMode : true,
@@ -98,7 +122,14 @@ jQuery(document).ready(function() {
 
     // sec1 lightbox
     $('.js_sec1_lightbox_btn').click(function(){
-        $('.js_sec1_lightbox').toggleClass('active');
+        let index = $(this).index();
+        $('.js_sec1_lightbox').eq(index).toggleClass('active');
         $('.sec1').toggleClass('lightbox_open');
+    });
+
+    $('.js_sec1_lightbox_wrap,.js_sec1_lightbox_close').click(function(){
+        console.log(':D');
+        $('.js_sec1_lightbox').removeClass('active');
+        $('.sec1').removeClass('lightbox_open');
     });
 });

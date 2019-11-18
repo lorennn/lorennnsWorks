@@ -32,7 +32,6 @@
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-
 .font-Arial {
     font-family: 'Arial', sans-serif; /* 正黑 */
 }
@@ -51,6 +50,10 @@
 .font-fff {
     color: #fff;
 }
+.font-fff-07 {
+    color: rgba(255, 255, 255, 0.7);
+}
+
 .font-333 {
     color: #333;
 }
@@ -58,9 +61,12 @@
     color: #a3a3a3;
 }
 
-
 .font-acacac {
     color: #acacac;
+}
+
+.font-e8cfa8 {
+    color: #e8cfa8;
 }
 
 
@@ -73,6 +79,9 @@
 }
 .fz-20 {
     font-size: 20px;
+}
+.fz-22 {
+    font-size: 22px;
 }
 .fz-24 {
     font-size: 24px;
