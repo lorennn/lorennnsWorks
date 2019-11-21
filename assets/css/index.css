@@ -423,7 +423,8 @@ body {
     opacity: 0;
 }
 .sec1_lightbox .lightbox_img{
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 60%;
     margin-left: 32%;
     padding-bottom: 100px;
@@ -431,12 +432,14 @@ body {
 }
 .sec1_lightbox .lightbox_img img{
     width: 100%;
-    margin-bottom: 50px;
+    margin: 0 auto 50px auto;
     border-radius: 8px;
 }
-.sec1_lightbox .lightbox_img_mobile{
-    width: 40%;
-    margin-left: 40%;
+.sec1_lightbox .lightbox_img img.img_pad{
+    max-width: 540px;
+}
+.sec1_lightbox .lightbox_img img.img_mobile{
+    max-width: 340px;
 }
 .sec1_lightbox .lightbox_img_mobile img{
     border-radius: 15px;
