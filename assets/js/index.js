@@ -3,7 +3,8 @@ jQuery(document).ready(function() {
     // header about me
     $('.js_about_me').click(function(){
         var windowH = $(window).height();
-        if($('body').hasClass('sec2')){
+        console.log(windowH);
+        if($('body').hasClass('atSec2')){
             $('body').animate({
                 scrollTop: (Number(-windowH))
             },2000);
@@ -12,16 +13,15 @@ jQuery(document).ready(function() {
             setTimeout(function(){
                 $('.sec1_header').removeClass('black');
             },500);
-            $(this).text('about me');
-            // $(this).text('about <br>me');
+            $(this).html('about <br>me');
         }else{
             $('body').animate({
                 scrollTop: windowH
             },800);
             $('.sec1_header').addClass('black');
-            // $(this).text('back to '<br>'top');
+            $(this).html('back to <br>top');
         }
-        $('body').toggleClass('sec2');
+        $('body').toggleClass('atSec2');
     });
 
     // sec1 swiper

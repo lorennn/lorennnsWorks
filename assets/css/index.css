@@ -95,6 +95,7 @@ body {
 .sec1_header.black .header_about::after{
     background-image: url(../images/icon/down_B.png);
     transform: rotateZ(180deg);
+    margin-left: 32px;
 }
 .sec1_header .header_contact span,
 .sec1_header .header_contact a{
@@ -410,6 +411,7 @@ body {
     white-space: nowrap;
     text-decoration: none;
     cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .sec1_lightbox .lightbox_info .info_tag::before{
     display: inline-block;
@@ -502,11 +504,24 @@ body {
 /* ----- sec1 ----- end */
 /* ----- sec2 end ----- */
 .sec2 {
-    background-color: #424242;
     height: 100vh;
+    padding: 0 5% 0 5%;
+    box-sizing: border-box;
+    background-color: #424242;
+}
+.sec2_wrap{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 174px);
+    padding-top: 100px;
+    overflow-y: scroll;
+}
+.sec2_wrap::-webkit-scrollbar {
+    opacity: 0;
 }
 .sec2_self{
-    padding: 10% 0 0 5%;
+    width: 45%;
+    margin-right: 5%;
 }
 .sec2_self .edu_wrap{
     margin-bottom: 20px;
@@ -529,6 +544,37 @@ body {
 .sec2 .cont_text{
     display: block;
     line-height: 24px;
+}
+.sec2_exper .job_link{
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.sec2_exper .job_link::before{
+    display: inline-block;
+    content:'';
+    width: 13px;
+    height: 12px;
+    background-image: url(../images/icon/link.png);
+    background-size: cover;
+    margin-right: 5px;
+}
+/* 經歷 */
+.sec2_exper{
+    width: 45%;
+    line-height: 28px;
+}
+.sec2_exper .exper_job{
+    padding-bottom: 40px;
+}
+.sec2_exper .job_time{
+    padding-bottom: 5px;
+}
+.sec2_exper .job_comp::before{
+    display: inline-block;
+    content: '|';
+    margin: 0 8px;
+    opacity: 0.5;
 }
 /* ----- sec2 ----- end */
 
@@ -583,7 +629,6 @@ body {
 
     /* ----- sec1 ----- end */
     /* ----- sec2 ----- */
-
     /* ----- sec2 end ----- */
 }
 @media only screen and (min-width: 991px) and (max-height: 775px){
@@ -642,7 +687,7 @@ body {
     }
     .sec1_lightbox{
         width: calc(100% - 90px);
-        height: calc(100% - 162px);
+        height: calc(100% - 142px);
         padding: 0 38px 0 52px;
         margin: 90px 0 0 0;
         background-color: #F2F2F2;
@@ -676,7 +721,23 @@ body {
     }
     /* ----- sec1 ----- end */
     /* ----- sec2 ----- */
-
+    .sec2{
+        padding: 100px 52px 50px 52px;
+    }
+    .sec2_wrap{
+        display: block;
+        padding-top: 30px;
+    }
+    .sec2_self,.sec2_exper{
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    .sec2_exper{
+        padding-top: 50px;
+    }
+    .sec2_self{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
     /* ----- sec2 end ----- */
 }
 @media only screen and (max-width: 991px)and (min-width: 768px){
@@ -726,7 +787,7 @@ body {
         transform: scale(0.6);
     }
     .sec1_swiper .swiper-slide.swiper-slide-active{
-        transform: scale(1.2);
+        transform: scale(1.4);
     }
     .sec1_swiper .swiper-slide img{
         border-radius: 5px;
@@ -736,14 +797,17 @@ body {
     }
     .sec1_lightbox{
         width: calc(100% - 15px);
+        height: calc(100% - 114px);
         padding: 0 0 0 15px;
-        margin: 30px 0 0 0;
+        margin: 65px 0 0 0;
     }
     .sec1_lightbox .lightbox_imgWrap_pad{
-        height: calc(100vh - 21px);
+        height: calc(100% + 49px);
     }
     /* ----- sec1 ----- end */
     /* ----- sec2 ----- */
-
+    .sec2{
+        padding: 70px 15px 50px 15px;
+    }
     /* ----- sec2 end ----- */
 }
