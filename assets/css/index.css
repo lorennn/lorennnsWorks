@@ -690,16 +690,15 @@ body {
         padding: 5px 15px;
     }
     .sec1_header .header_maintitle{
-        top: 0;
+        top: 6px;
         left: 15px;
     }
     .sec1_header .header_maintitle .maintitle_en{
-        font-size: 12px;
-        line-height: 38px;
+        font-size: 17px;
+        line-height: 30px;
         letter-spacing: 9px;
     }
     .sec1_header .header_maintitle .maintitle_zh{
-        /* display: none; */
         font-size: 12px;
     }
     .sec1_header .header_about{

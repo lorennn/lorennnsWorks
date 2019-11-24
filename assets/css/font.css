@@ -115,3 +115,9 @@
 .ls-2{
     letter-spacing: 2px;
 }
+
+@media only screen and (max-width: 767px){
+    .font-Moon-L {
+        font-family: 'Moon-R','Microsoft JhengHei';
+    }
+}
