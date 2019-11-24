@@ -32,7 +32,7 @@ jQuery(document).ready(function() {
         autoplay : true,
         speed:1500,
         freeMode : true,
-        // mousewheel: true, // 失效
+        mousewheel: true, // 失效
         keyboard : true,
         pagination: {
           el: '.swiper-pagination-sec1',
@@ -121,14 +121,16 @@ jQuery(document).ready(function() {
     }, 4000);
 
     // sec1 lightbox
+    // 開啟彈窗
     $('.js_sec1_lightbox_btn').click(function(){
         let index = $(this).index();
         $('.js_sec1_lightbox').eq(index).toggleClass('active');
         $('.sec1').toggleClass('lightbox_open');
     });
 
+    // 關閉彈窗
     $('.js_sec1_lightbox_wrap,.js_sec1_lightbox_close').click(function(){
-        console.log(':D');
+        // console.log(':D');
         $('.js_sec1_lightbox').removeClass('active');
         $('.sec1').removeClass('lightbox_open');
     });

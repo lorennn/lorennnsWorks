@@ -145,7 +145,7 @@ body {
 .sec1_svg .svg_text{
     position: absolute;
     width: 75%;
-    bottom: 310px;
+    bottom: 220px;
     padding-left: 50px;
     text-align: center;
     z-index: 4;
@@ -322,6 +322,16 @@ body {
     width: 100%;
     border-radius: 10px;
 }
+.swiper-container-vertical>.swiper-pagination-sec1{
+    position: absolute;
+    right: -12%;
+}
+.swiper-container-vertical>.swiper-pagination-sec1 .swiper-pagination-bullet{
+    margin: 11px 0;
+}
+.swiper-container-vertical>.swiper-pagination-sec1 .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background-color: rgba(0, 0, 0, 0.8);
+}
 .swiper-button-prev-sec1,.swiper-button-next-sec1{
     position: absolute;
     width: 100%;
@@ -378,17 +388,35 @@ body {
     display: inline-block;
     padding: 4px 20px;
     border: 1px solid rgba(163, 163, 163, 0.5);
+    background-image: linear-gradient(60deg, #fff 0%,#fff 70%,transparent 70.0001%);
     margin-bottom: 15px;
     letter-spacing: 2px;
 }
-.sec1_lightbox .lightbox_info .info_tag{
-    line-height: 32px;
-    letter-spacing: 1px;
+.sec1_lightbox .lightbox_info .info_tag,
+.sec1_lightbox .lightbox_info .info_link{
+    line-height: 30px;
+    letter-spacing: 0.5px;
+}
+.sec1_lightbox .lightbox_info .info_link{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
 }
 .sec1_lightbox .lightbox_info .info_tag::before{
     display: inline-block;
     content:'#';
     margin-right: 10px;
+}
+.sec1_lightbox .lightbox_info .info_link::before{
+    display: inline-block;
+    content:'';
+    width: 15px;
+    height: 14px;
+    background-image: url(../images/icon/link.png);
+    background-size: cover;
+    margin-right: 5px;
 }
 /* 作品 palettes */
 .sec1_lightbox .lightbox_info .info_palettes{
@@ -396,7 +424,7 @@ body {
     width: 100%;
     height: 6px;
     border-radius: 15px;
-    margin-top: 13px;
+    margin: 13px 0;
 }
 .sec1_lightbox_1 .lightbox_info .info_palettes{
     background-image: linear-gradient(to right, #f0cb70 0%,#f0cb70 10%,#e27382 10.001%,#e27382 70%,#905f47 70.0001%,#905f47 78%,#322351 78.0001%,#322351 100%);
@@ -413,6 +441,13 @@ body {
 .sec1_lightbox_3 .lightbox_info .info_palettes:nth-child(6){
     background-image: linear-gradient(to right, #fff 0%,#fff 10%,#bababa 10.0001%,#bababa 32%,#919191 32.0001%,#919191 55%,#7c7c7c 55.0001%);
 }
+.sec1_lightbox_4 .lightbox_info .info_palettes{
+    background-image: linear-gradient(to right, #fff 0%,#fff 12%, #ECECEC 12%,#ECECEC 33%,#DDDDDD 33.0001%,#DDDDDD 75%,#528487 75.0001%,#528487 85%,#226164 85.0001%);
+}
+.sec1_lightbox_5 .lightbox_info .info_palettes{
+    background-image: linear-gradient(to right, #EFE2B1 0%,#EFE2B1 10%,#C8964E 10.0001%,#C8964E 20%,#AC7639 20.0001%,#AC7639 45%,#B1191E 45.0001%,#B1191E 65%,#1D1D1C 65.0001%);
+}
+
 /* 作品 palettes end */
 .sec1_lightbox .lightbox_imgWrap{
     height: calc(100vh - 115px);
@@ -544,6 +579,34 @@ body {
 
     /* ----- sec2 end ----- */
 }
+@media only screen and (min-width: 991px) and (max-height: 775px){
+    .sec1_svg{
+        transform: scale(0.75);
+        transform-origin: center;
+    }
+    .sec1_svg .svg_text{
+        width: 100%;
+    }
+}
+@media only screen and (min-height: 700px){
+    .sec1_svg .svg_text{
+        bottom: 300px;
+    }
+}
+@media only screen and (max-width: 1300px){
+    .sec1_lightbox{
+        width: 72%;
+        margin: 0 240px 0 85px;
+    }
+    .sec1_lightbox .lightbox_info{
+        width: 34%; 
+    }
+    .sec1_lightbox .lightbox_img{
+        margin-left: 36%;
+        filter: drop-shadow(12px 29px 10px rgba(51, 51, 51, 0.4))
+    }
+}
+
 @media only screen and (max-width: 991px){
     /* ----- sec1 ----- */
 
