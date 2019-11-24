@@ -13,26 +13,27 @@ jQuery(document).ready(function() {
                 $('.sec1_header').removeClass('black');
             },500);
             $(this).text('about me');
+            // $(this).text('about <br>me');
         }else{
             $('body').animate({
                 scrollTop: windowH
             },800);
             $('.sec1_header').addClass('black');
-            $(this).text('back to top');
+            // $(this).text('back to '<br>'top');
         }
         $('body').toggleClass('sec2');
     });
 
     // sec1 swiper
     var swiper = new Swiper('.swiper-container-sec1', {
-        direction: 'vertical',
-        slidesPerView:'auto',
-        spaceBetween : 20,
-        // loop : true,
+        direction : 'horizontal',
+        slidesPerView: 3,
+        centeredSlides: true,
+        spaceBetween : 8,
         autoplay : true,
         speed:1500,
         freeMode : true,
-        mousewheel: true, // 失效
+        mousewheel: false, // 失效
         keyboard : true,
         pagination: {
           el: '.swiper-pagination-sec1',
@@ -44,6 +45,18 @@ jQuery(document).ready(function() {
         },
         observer:true,
         observeParents:true,
+        breakpoints:{
+            768:{ // 桌機
+                mousewheel: true, // 失效
+            },
+            992:{ // 平板
+                direction: 'vertical',
+                slidesPerView:'auto',
+                centeredSlides: false,
+                mousewheel: false, // 失效
+                spaceBetween : 20,
+            },
+        }
     });
 
     // UIUX FD 亂碼
