@@ -12,6 +12,7 @@ body {
     color: #333;
     transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
     cursor: default;
+    background-color: #f2f2f2;
 }
 .sec1,
 .sec1_lightbox,.sec1_header,
@@ -465,6 +466,7 @@ body {
 }
 .sec1_lightbox .lightbox_imgWrap::-webkit-scrollbar {
     opacity: 0;
+    width: 0;
 }
 .sec1_lightbox .lightbox_img{
     display: flex;
@@ -518,6 +520,7 @@ body {
 }
 .sec2_wrap::-webkit-scrollbar {
     opacity: 0;
+    width: 0;
 }
 .sec2_self{
     width: 45%;
@@ -686,9 +689,9 @@ body {
         opacity: 1;
     }
     .sec1_lightbox{
-        width: calc(100% - 90px);
+        width: calc(100% - 104px);
         height: calc(100% - 142px);
-        padding: 0 38px 0 52px;
+        padding: 0 52px 0 52px;
         margin: 90px 0 0 0;
         background-color: #F2F2F2;
     }
@@ -698,6 +701,7 @@ body {
     }
     .sec1_lightbox .lightbox_imgWrap_pad::-webkit-scrollbar {
         opacity: 0;
+        width: 0;
     }
     .sec1_lightbox .lightbox_info{
         position: relative;
@@ -781,7 +785,7 @@ body {
         padding-top: 0;
     }
     .sec1_swiper .swiper-slide{
-        transform-origin: center 20%;
+        transform-origin: center 6%;
     }
     .sec1_swiper .swiper-slide:not(.swiper-slide-active){
         transform: scale(0.6);
@@ -796,9 +800,9 @@ body {
         display: none;
     }
     .sec1_lightbox{
-        width: calc(100% - 15px);
+        width: calc(100% - 30px);
         height: calc(100% - 114px);
-        padding: 0 0 0 15px;
+        padding: 0 15px 0 15px;
         margin: 65px 0 0 0;
     }
     .sec1_lightbox .lightbox_imgWrap_pad{
