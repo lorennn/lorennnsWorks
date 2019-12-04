@@ -3,7 +3,7 @@ jQuery(document).ready(function() {
     // header about me
     $('.js_about_me').click(function(){
         var windowH = $(window).height();
-        console.log(windowH);
+        // console.log(windowH);
         if($('body').hasClass('atSec2')){
             $('body').animate({
                 scrollTop: (Number(-windowH))

@@ -726,17 +726,19 @@ body {
 /* ----- sec1 ----- end */
 /* ----- sec2 end ----- */
 .sec2 {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
     height: 100vh;
     padding: 0 5% 0 5%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background-color: #424242;
+}
+.sec2_padMobile_wrap{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 }
 .sec2_self{
     width: 45%;
@@ -783,23 +785,10 @@ body {
     opacity: 0;
     width: 0;
 }
-.sec2_exper .job_link{
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-}
-.sec2_exper .job_link::before{
-    display: inline-block;
-    content:'';
-    width: 13px;
-    height: 12px;
-    background-image: url(../images/icon/link.png);
-    background-size: cover;
-    margin-right: 5px;
-}
 /* 經歷 */
 .sec2_exper{
     line-height: 28px;
+    padding-bottom: 200px;
 }
 .sec2_exper .exper_job{
     position: relative;
@@ -823,6 +812,20 @@ body {
     content: '|';
     margin: 0 8px;
     opacity: 0.5;
+}
+.sec2_exper .job_link{
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.sec2_exper .job_link::before{
+    display: inline-block;
+    content:'';
+    width: 13px;
+    height: 12px;
+    background-image: url(../images/icon/link.png);
+    background-size: cover;
+    margin-right: 5px;
 }
 /* ----- sec2 ----- end */
 
@@ -1025,16 +1028,28 @@ body {
     .sec2{
         padding: 100px 52px 50px 52px;
     }
-    .sec2_wrap{
+    .sec2_padMobile_wrap{
         display: block;
+        height: calc(100vh - 100px);
+        overflow: scroll;
+    } 
+    .sec2_padMobile_wrap::-webkit-scrollbar {
+        opacity: 0;
+        width: 0;
+    }
+    .sec2_wrap{
+        width: 100%;
+        height: auto;
         padding-top: 30px;
     }
-    .sec2_self,.sec2_exper{
+    .sec2_self{
         width: 100%;
-        padding-bottom: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
     .sec2_exper{
-        padding-top: 50px;
+        width: 100%;
+        padding: 0 0 100px 0;
     }
     .sec2_self{
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -1121,6 +1136,15 @@ body {
     /* ----- sec2 ----- */
     .sec2{
         padding: 70px 15px 50px 15px;
+    }
+    .sec2_self{
+        padding-top: 50px;
+    }
+    .sec2_exper .exper_job .job_img{
+        position: relative;
+        width: 110px;
+        right: auto;
+        left: 0;
     }
     /* ----- sec2 end ----- */
 }
