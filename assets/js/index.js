@@ -14,12 +14,14 @@ jQuery(document).ready(function() {
                 $('.sec1_header').removeClass('black');
             },500);
             $(this).html('about <br>me');
+            $(this).attr('title','about me');
         }else{
             $('body').animate({
                 scrollTop: windowH
             },800);
             $('.sec1_header').addClass('black');
             $(this).html('back to <br>top');
+            $(this).attr('title','back to top');
         }
         $('body').toggleClass('atSec2');
     });
