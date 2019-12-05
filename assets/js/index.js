@@ -2,7 +2,7 @@ jQuery(document).ready(function() {
 
     // 判別Safari
     if (navigator.userAgent.indexOf("Safari") > -1 && navigator.userAgent.indexOf("Chrome") < 0) {
-        alert('Safari');
+        // alert('Safari');
         $('body').addClass('isSafari');
 
         // 在safari中不明原因無法捲動（移除overflow = hidden也一樣，目前先自由捲動）
