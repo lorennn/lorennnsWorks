@@ -544,10 +544,10 @@ body {
 /* 作品彈窗 */
 .sec1_lightbox{
     position: absolute;
-    width: 62%;
+    width: calc(100% - 450px);
     top: 0;
     left: 0;
-    margin: 0 240px 0 200px;
+    margin: 0 240px 0 140px;
     opacity: 0;
     z-index: -1;
 }
@@ -792,8 +792,17 @@ body {
 }
 .sec2_exper .exper_job{
     position: relative;
-    width: 75%;
+    width: calc(100% - 80px);
     padding-bottom: 40px;
+}
+.sec2_exper .exper_job:not(:last-child)::after{
+    position: relative;
+    display: block;
+    content: '';
+    width: calc(100% + 80px);
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 50px;
 }
 .sec2_exper .exper_job .job_img{
     position: absolute;
@@ -806,6 +815,7 @@ body {
 }
 .sec2_exper .job_time{
     padding-bottom: 5px;
+    letter-spacing: 1.5px;
 }
 .sec2_exper .job_comp::before{
     display: inline-block;
@@ -1139,6 +1149,9 @@ body {
     }
     .sec2_self{
         padding-top: 50px;
+    }
+    .sec2_exper .exper_job{
+        width: 100%;
     }
     .sec2_exper .exper_job .job_img{
         position: relative;
