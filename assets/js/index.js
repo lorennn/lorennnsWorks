@@ -1,11 +1,19 @@
 jQuery(document).ready(function() {
-    
+
+    // 判別Safari
+    if (navigator.userAgent.indexOf("Safari") > -1 && navigator.userAgent.indexOf("Chrome") < 0) {
+        alert('Safari');
+        $('body').addClass('isSafari');
+        $("html,body").css('overflow','auto');
+    }
+
+
     // header about me
     $('.js_about_me').click(function(){
         var windowH = $(window).height();
         // console.log(windowH);
         if($('body').hasClass('atSec2')){
-            $('body').animate({
+            $('html,body').animate({
                 scrollTop: (Number(-windowH))
             },2000);
 
@@ -16,9 +24,10 @@ jQuery(document).ready(function() {
             $(this).html('about <br>me');
             $(this).attr('title','about me');
         }else{
-            $('body').animate({
+            $("html,body").animate({
                 scrollTop: windowH
             },800);
+
             $('.sec1_header').addClass('black');
             $(this).html('back to <br>top');
             $(this).attr('title','back to top');
@@ -145,8 +154,9 @@ jQuery(document).ready(function() {
 
     // 關閉彈窗
     $('.js_sec1_lightbox_wrap,.js_sec1_lightbox_close').click(function(){
-        // console.log(':D');
         $('.js_sec1_lightbox').removeClass('active');
         $('.sec1').removeClass('lightbox_open');
     });
+
+    console.log('XD');
 });
