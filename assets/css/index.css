@@ -448,12 +448,6 @@ body {
 }
 /* svg end */
 /* 作品 swiper */
-
-
-
-/* .sec1_swiper_wrap{
-    position: relative;
-} */
 .sec1_swiper{
     position: absolute;
     width: 203px;
@@ -465,9 +459,6 @@ body {
     width: 100%;
     height: 100%;
     padding-top: 90px;
-
-    /* margin-left: auto;
-    margin-right: auto; */
 }
 .sec1_swiper .swiper-slide{
     position: relative;
