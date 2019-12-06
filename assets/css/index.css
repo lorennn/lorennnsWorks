@@ -739,6 +739,7 @@ body {
     top: 40px;
     right: 40px;
     opacity: 0.5;
+    cursor: pointer;
 }
 .sec2_padMobile_wrap{
     display: -webkit-box;
