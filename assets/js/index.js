@@ -9,9 +9,8 @@ jQuery(document).ready(function() {
         $("html,body").css('overflow','auto');
     }
 
-
     // header about me
-    $('.js_about_me').click(function(){
+    $('.js_about_me,#js_sec2_close').click(function(){
         var windowH = $(window).height();
         // console.log(windowH);
         if($('body').hasClass('atSec2')){
@@ -23,53 +22,71 @@ jQuery(document).ready(function() {
             setTimeout(function(){
                 $('.sec1_header').removeClass('black');
             },500);
-            $(this).html('about <br>me');
-            $(this).attr('title','about me');
+            $('.js_about_me').html('about <br>me');
+            $('.js_about_me').attr('title','about me');
         }else{
             $("html,body").animate({
                 scrollTop: windowH
             },800);
 
             $('.sec1_header').addClass('black');
-            $(this).html('back to <br>top');
-            $(this).attr('title','back to top');
+            $('.js_about_me').html('back to <br>top');
+            $('.js_about_me').attr('title','back to top');
         }
         $('body').toggleClass('atSec2');
     });
 
     // sec1 swiper
-    var swiper = new Swiper('.swiper-container-sec1', {
-        direction : 'horizontal',
-        slidesPerView: 3,
-        centeredSlides: true,
-        spaceBetween : 8,
-        autoplay : true,
-        speed:1500,
-        freeMode : true,
-        mousewheel: false, // 失效
-        keyboard : true,
-        pagination: {
-          el: '.swiper-pagination-sec1',
-          clickable:true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next-sec1',
-          prevEl: '.swiper-button-prev-sec1',
-        },
-        observer:true,
-        observeParents:true,
-        breakpoints:{
-            768:{ // 桌機
-                mousewheel: true, // 失效
+    if ($(window).width() < 992){
+        var mainSwiper = new Swiper('.swiper-container-sec1', {
+            direction : 'horizontal',
+            slidesPerView: 3,
+            mousewheel : {
+                releaseOnEdges: true,  //可修正mousewheel捲動失效問題
             },
-            992:{ // 平板
-                direction: 'vertical',
-                slidesPerView:'auto',
-                centeredSlides: false,
-                mousewheel: false, // 失效
-                spaceBetween : 20,
+            centeredSlides: true,
+            spaceBetween : 8,
+            autoplay : true,
+            speed:1500,
+            keyboard : true,
+            pagination: {
+            el: '.swiper-pagination-sec1',
+            clickable:true,
             },
-        }
+            navigation: {
+            nextEl: '.swiper-button-next-sec1',
+            prevEl: '.swiper-button-prev-sec1',
+            },
+            observer:true,
+            observeParents:true,
+        });
+    }else{
+        var mainSwiper = new Swiper('.swiper-container-sec1', {
+            direction: 'vertical',
+            slidesPerView:'auto',
+            mousewheel : {
+                releaseOnEdges: true,  //可修正mousewheel捲動失效問題
+            },
+            centeredSlides: false,
+            spaceBetween : 20,
+            autoplay : true,
+            speed:1500,
+            keyboard : true,
+            pagination: {
+            el: '.swiper-pagination-sec1',
+            clickable:true,
+            },
+            navigation: {
+            nextEl: '.swiper-button-next-sec1',
+            prevEl: '.swiper-button-prev-sec1',
+            },
+            observer:true,
+            observeParents:true,
+        });
+    }
+    // 當視窗有任何調整重整swiper
+    $(window).resize(function() {
+        location.reload();
     });
 
     // UIUX FD 亂碼
@@ -159,6 +176,4 @@ jQuery(document).ready(function() {
         $('.js_sec1_lightbox').removeClass('active');
         $('.sec1').removeClass('lightbox_open');
     });
-
-    console.log('XD');
 });
