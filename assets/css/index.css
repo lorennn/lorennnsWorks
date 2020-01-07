@@ -1,9 +1,3 @@
-*:focus{
-    outline: transparent;
-}
-::selection{
-    background: #eee;
-}
 html,
 body {
     font-family: 'Noto Sans TC', sans-serif;
@@ -142,6 +136,19 @@ body {
     background-image: url(../images/icon/email.png);
     background-size: cover;
     margin-left: 22px;
+}
+.sec1_header .contact_kit{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/icon/kit.png);
+    background-size: cover;
+    margin-left: 22px;
+    opacity: 0.6;
+}
+.sec1_header .contact_kit:hover{
+    opacity: 1;
+
 }
 /* header end */
 /* ----- sec1 ----- */
@@ -979,6 +986,9 @@ body {
     .sec1_header .header_maintitle{
         position: fixed;
         top: 20px;
+    }
+    .sec1_header .contact_kit{
+        display: none;
     }
     .sec1_svg{
         display: none;
