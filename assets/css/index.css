@@ -519,7 +519,7 @@ body {
     cursor: pointer;
 }
 .swiper-button-next-sec1{
-    bottom: 53px;
+    bottom: 51px;
     background: -webkit-linear-gradient(to top, rgba(242, 242, 242, 1) 20%,rgba(242, 242, 242, 0) 100%);
     background: -moz-linear-gradient(to top, rgba(242, 242, 242, 1) 20%,rgba(242, 242, 242, 0) 100%);
     background: -o-linear-gradient(to top, rgba(242, 242, 242, 1) 20%,rgba(242, 242, 242, 0) 100%);
