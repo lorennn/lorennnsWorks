@@ -117,7 +117,7 @@ body {
     content: '';
     width: 1px;
     height: 21px;
-    background-color: rgb(200, 200, 200);
+    background-color: rgba(200, 200, 200, .3);
     top: 0;
     left: 109px;
 }
