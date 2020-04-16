@@ -672,10 +672,16 @@ body {
     background-image: linear-gradient(to right, #fff 0%,#fff 10%,#FFCF64 10.0001%,#FFCF64 50%,#FF7B31 50.0001%,#FF7B31 70%,#DD3C3C 70.0001%,#DD3C3C 85%,#707070 85.0001%);
 }
 .sec1_lightbox_7 .lightbox_info .info_palettes{
-    background-image: -webkit-linear-gradient(to right, #fff 0%,#fff 10%,#FFCF64 10.0001%,#FFCF64 50%,#FF7B31 50.0001%,#FF7B31 70%,#DD3C3C 70.0001%,#DD3C3C 85%,#707070 85.0001%);
-    background-image: -moz-linear-gradient(to right, #fff 0%,#fff 10%,#FFCF64 10.0001%,#FFCF64 50%,#FF7B31 50.0001%,#FF7B31 70%,#DD3C3C 70.0001%,#DD3C3C 85%,#707070 85.0001%);
-    background-image: -o-linear-gradient(to right, #fff 0%,#fff 10%,#FFCF64 10.0001%,#FFCF64 50%,#FF7B31 50.0001%,#FF7B31 70%,#DD3C3C 70.0001%,#DD3C3C 85%,#707070 85.0001%);
+    background-image: -webkit-linear-gradient(to right, #fff 0%,#fff 10%,#7e1d46 10.0001%,#7e1d46 50%,#1d0842 50.0001%,#1d0842 70%,#21091d 70.0001%,#21091d 85%,#120b12 85.0001%);
+    background-image: -moz-linear-gradient(to right, #fff 0%,#fff 10%,#7e1d46 10.0001%,#7e1d46 50%,#1d0842 50.0001%,#1d0842 70%,#21091d 70.0001%,#21091d 85%,#120b12 85.0001%);
+    background-image: -o-linear-gradient(to right, #fff 0%,#fff 10%,#7e1d46 10.0001%,#7e1d46 50%,#1d0842 50.0001%,#1d0842 70%,#21091d 70.0001%,#21091d 85%,#120b12 85.0001%);
     background-image: linear-gradient(to right, #fff 0%,#fff 10%,#7e1d46 10.0001%,#7e1d46 50%,#1d0842 50.0001%,#1d0842 70%,#21091d 70.0001%,#21091d 85%,#120b12 85.0001%);
+}
+.sec1_lightbox_8 .lightbox_info .info_palettes{
+    background-image: -webkit-linear-gradient(to right, #fff 0%,#fff 10%,#F0F0F0 10.0001%,#F0F0F0 50%,#CF9458 50.0001%,#CF9458 70%,#023B97 70.0001%,#023B97 85%,#030B2E 85.0001%);
+    background-image: -moz-linear-gradient(to right, #fff 0%,#fff 10%,#F0F0F0 10.0001%,#F0F0F0 50%,#CF9458 50.0001%,#CF9458 70%,#023B97 70.0001%,#023B97 85%,#030B2E 85.0001%);
+    background-image: -o-linear-gradient(to right, #fff 0%,#fff 10%,#F0F0F0 10.0001%,#F0F0F0 50%,#CF9458 50.0001%,#CF9458 70%,#023B97 70.0001%,#023B97 85%,#030B2E 85.0001%);
+    background-image: linear-gradient(to right, #fff 0%,#fff 10%,#F0F0F0 10.0001%,#F0F0F0 50%,#CF9458 50.0001%,#CF9458 70%,#023B97 70.0001%,#023B97 85%,#030B2E 85.0001%);
 }
 
 /* 作品 palettes end */
