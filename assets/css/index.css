@@ -81,15 +81,15 @@ body {
 }
 .sec1_header.black .header_about{
     background-color: #e8cfa8;
-    color:#000;
+    color: #555;
     font-weight: bold;
 }
 .sec1_header .header_about::after{
     position: relative;
     display: inline-block;
     content: '';
-    width: 8px;
-    height: 12px;
+    width: 7px;
+    height: 10px;
     background-image: url(../images/icon/down.png);
     background-size: cover;
     margin-left: 50px;
