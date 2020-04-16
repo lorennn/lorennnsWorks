@@ -26,23 +26,23 @@
 }
 /* font-family */
 .font-JH {
-    font-family: 'Microsoft JhengHei', sans-serif !important; /* 正黑 */
+    font-family: 'Microsoft JhengHei', sans-serif; /* 正黑 */
 }
 .font-NotoSans {
-    font-family: 'Noto Sans TC', sans-serif !important;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .font-Arial {
-    font-family: 'Arial', sans-serif !important; /* 正黑 */
+    font-family: 'Arial', sans-serif; /* 正黑 */
 }
 .font-Moon-R {
-    font-family: 'Moon-R','Microsoft JhengHei' !important;
+    font-family: 'Moon-R','Microsoft JhengHei' !;
 }
 .font-Moon-L {
-    font-family: 'Moon-L','Microsoft JhengHei' !important;
+    font-family: 'Moon-L','Microsoft JhengHei';
 }
 .font-Affogato-B {
-    font-family: 'Affogato-B','Microsoft JhengHei' !important;
+    font-family: 'Affogato-B','Microsoft JhengHei';
 }
 
 
